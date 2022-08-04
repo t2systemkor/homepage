@@ -25,6 +25,14 @@ DevOps 컨설팅 :
 
 운영 :
 
+------------ 보유 기술 --------------------------
+.NET, WPF, WCF, .net core
+
+AWS, NCP CloudService 
+
+Kubernetes, RabbitMQ, Grafana, Prometheus, Elasticsearch, Kibana, Sonaqube, 
+
+
 
 ---------개인별 약력 ----------------
 
