@@ -27,11 +27,17 @@ DevOps 컨설팅 :
 
 ------------ 보유 기술 --------------------------
 
-.NET, WPF, WCF, .net core
+Cloud : AWS, NCP 
 
-AWS, NCP CloudService 
+OS : Windows, Linux 
 
-Kubernetes, RabbitMQ, Grafana, Prometheus, Elasticsearch, Kibana, Sonaqube, 
+WAS : IIS, Nginx, Kestral 
+
+Application(OpenSource) : Kubernetes, RabbitMQ, Grafana, Prometheus, Kibana, Sonaqube, Continer Registry, Docker, 
+
+DataBase : MySql, MongoDB, MsSql, Elasticsearch
+
+Develop : .NET, WPF, WCF, .net core, EFCore, hangfire 
 
 
 ---------주요 맴버 약력 ----------------
