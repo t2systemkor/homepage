@@ -12,7 +12,6 @@
 ---------개인별 약력 ----------------
 *박길선*
 연세세브란스 : 차세대 의료정보 시스템 Framework개발, 기술지원
-
 롯데카드 : 멤버쉽 서비스 개발 
 KT : GOSS Framework개발, 기술지원
 SK : Hyper Work Place Framework개발, 기술지원
