@@ -1067,12 +1067,16 @@ a.s_f_5:hover {
   color: #fff;
 }
 
-/* Contact Us page */
+/* Contact */
+#contact {
+  display: none;
+}
 #google_map {
   padding-top: 76px;
   overflow: hidden;
   background-color: #83a7a5 !important;
 }
+
 .messsage_content {
   margin-top: 70px;
 }
