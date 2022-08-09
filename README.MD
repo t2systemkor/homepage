@@ -27,17 +27,19 @@ DevOps 컨설팅 :
 
 ------------ 보유 기술 --------------------------
 
-Cloud : AWS, NCP 
+Cloud : AWS(Amazon Web Service), NCP(Naver Cloud Platform)
 
 OS : Windows, Linux 
 
 WAS : IIS, Nginx, Kestral 
 
-Application(OpenSource) : Kubernetes, RabbitMQ, Grafana, Prometheus, Kibana, Sonaqube, Continer Registry, Docker, 
+Application(OpenSource) : Kubernetes, RabbitMQ, Grafana, Prometheus, Kibana, Sonaqube, Continer Registry, Docker, Jenkins
 
 DataBase : MySql, MongoDB, MsSql, Elasticsearch
 
 Develop : .NET, WPF, WCF, .net core, EFCore, hangfire 
+
+Version Control System : Team Foundation Server, Git
 
 
 ---------주요 맴버 약력 ----------------
@@ -69,3 +71,17 @@ SKT : Hoppin서비스 eai시스템 개발
 서울대병원 : 차세대 의료정보 시스템  AA, TA
 
 가천대 길병원 : 치세대 의료 정보 시스템 AA, TA
+
+*김경표*
+
+서울대병원 : 장비인터페이스, 의료정보시스템 Framework 개발, 기술지원, 개발자 교육
+  : 환자모니터, 심전도(ECG), POCT 등 장비 인터페이스 연동 개발 및 운영
+  : 임상시험센터 진단검사 연계 시스템 개발 및 운영
+  : 연구중심병원 암유닛관리시스템 개발 및 운영
+  : 인체자원은행 EMR-BIMS 인터페이스 개발 및 운영  
+  : 차세대 병원정보시스템 구축 및 운영 (AA/TA)
+
+이지케어텍 : 의료정보시스템 Framework 개발, 기술지원
+  : Cloud 의료정보 시스템 Framework 개발, 기술지원 
+  : Cloud 의료정보 시스템 Infra 구축 및 운영
+  : Cloud 의료정보 시스템 CI/CD 배포 환경 구축 및 운영

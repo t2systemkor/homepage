@@ -1,4 +1,19 @@
- 
+var offsetHeight = 50
+
+$("body").scrollspy({
+	offset: offsetHeight
+ });
+
+ $('.navbar li a').click(function (event) {
+    var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - (offsetHeight - 1);
+    $('body,html').animate({
+        scrollTop: scrollPos
+    }, 500, function () {
+        $(".navbar-toggle").click();
+    });
+    return false;
+});
+
  jQuery(document).ready(function() {
 	 
 	$(window).load(function () {
@@ -39,7 +54,8 @@
 	 
 	 
  });
-	 
+
+ 
 	 
 	 
 	 
