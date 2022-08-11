@@ -923,6 +923,76 @@ a.btn {
   font-size: 16px;
 }
 
+/* Architecture Section */
+#architecture {
+  padding: 100px 0px 70px 0px;
+}
+
+.architecture_top {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.architecture h2 {
+  color: #0f5f5c;
+  font-size: 32px;
+  font-family: "NotoSansKRLight";
+}
+.architecture_top p {
+  color: #83a7a5;
+  font-size: 14px;
+  font-family: "NotoSansKRRegular";
+}
+
+.architecture_content .col-md-4 {
+  padding-bottom: 30px;
+}
+.single_architecture {
+  border: 1px solid rgba(221, 221, 221, 0.25);
+  padding: 30px;
+}
+.top_text {
+}
+.top_text span {
+  display: block;
+  font-size: 15px;
+  /* text-transform: uppercase; */
+  color: #6fb048;
+  padding-bottom: 30px;
+  font-family: "NotoSansKRMedium";
+}
+.top_text sub {
+  display: block;
+  font-size: 3.5rem;
+  color: #0f5f5c;
+  padding-bottom: 60px;
+  font-family: "montserratregular";
+}
+.top_text sup {
+  display: block;
+  font-size: 14px;
+  color: #0f5f5c;
+}
+.single_architecture img {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.single_architecture .vertical {
+  height: 100px;
+}
+.single_architecture .horizontal {
+  width: 100px;
+}
+.single_architecture ul {
+  padding-top: 20px;
+}
+.single_architecture ul li {
+  font-size: 14px;
+  color: #0f5f5c;
+  line-height: 30px;
+  font-family: "NotoSansKRLight";
+}
+
 /* help Section CSS */
 #help {
   padding: 50px 0px 100px 0px;
@@ -1182,6 +1252,12 @@ a.get_stared_btn {
 .single_about_text p {
   font-size: 16px;
   color: #83a7a5;
+}
+
+.single_about_text i {
+  font-size: 16px;
+  color: #83a7a5;
+  padding-right: 5px;
 }
 
 #team {
