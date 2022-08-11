@@ -16,6 +16,12 @@ DevOps 컨설팅 :
 
 AWS, NCP등 다양한 클라우드환경에서의 구축 및 운영 경험을 바탕으로 고객에게 최적화된 클라우드 인프라 아키텍처 설계와 경험을 제공
 
+관제 시스템 구축 컨설팅 :
+
+Grafana, prometheus등 open source를 기반으로한 시스템 관제 환경 구축 
+
+ElasticSearch, Kibana등 open source를 기반 로그 시스템 구축 
+
 ------------ 보유 기술 --------------------------
 
 Cloud : AWS(Amazon Web Service), NCP(Naver Cloud Platform)
