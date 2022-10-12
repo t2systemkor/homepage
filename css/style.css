@@ -952,6 +952,14 @@ a.btn {
   padding: 30px;
 }
 .top_text {
+  text-align: center;
+}
+.top_img {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 2px solid black; */
 }
 .top_text span {
   display: block;
