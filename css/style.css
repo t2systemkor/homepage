@@ -986,7 +986,7 @@ a.btn {
   padding-bottom: 20px;
 }
 .single_architecture .vertical {
-  height: 100px;
+  height: 80px;
 }
 .single_architecture .horizontal {
   width: 100px;
@@ -1321,4 +1321,18 @@ a.get_stared_btn {
 .single_team_area p i {
   font-size: 16px;
   padding-right: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+
+.random-image {
+  position: absolute;
+  width: 100px; /* 이미지 폭 설정 */
+  height: auto;
+  transform: rotate(0deg); /* 초기 회전 각도 설정 */
+  transition: transform 0.3s ease-in-out; /* 부드러운 애니메이션 효과 */
 }
