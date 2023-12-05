@@ -1325,7 +1325,7 @@ a.get_stared_btn {
 
 .image-container {
   position: relative;
-  width: 800px;
+  width: auto;
   height: 600px;
 }
 
