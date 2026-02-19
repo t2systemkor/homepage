@@ -27,13 +27,13 @@
         nav ul li a { text-decoration: none; color: #444; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: var(--primary-color); }
 
-        .lang-btn { cursor: pointer; border: 2px solid var(--primary-color); background: transparent; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; color: var(--primary-color); transition: 0.3s; }
+        .lang-btn { cursor: pointer; border: 2px solid var(--primary-color); background: transparent; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; color: var(--primary-color); transition: 0.3s; min-width: 80px; }
         .lang-btn:hover { background: var(--primary-color); color: white; }
 
         /* Hero Section */
-        #home { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1920') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
+        #home { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
         #home h1 { font-size: 3.2rem; margin-bottom: 1.5rem; word-break: keep-all; font-weight: 700; }
-        #home p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 800px; }
+        #home p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 850px; }
 
         /* Sections */
         section { padding: 100px 10%; }
@@ -48,12 +48,12 @@
         .history-content { color: #555; font-size: 1.05rem; line-height: 1.8; }
         .history-content b { color: #222; }
 
-        /* Tech Stack Styles */
+        /* Tech Stack */
         .tech-container { display: flex; flex-direction: column; gap: 40px; }
         .tech-category h3 { font-size: 1.2rem; margin-bottom: 15px; color: #666; border-left: 4px solid var(--secondary-color); padding-left: 10px; }
         .tech-grid { display: flex; flex-wrap: wrap; gap: 12px; }
-        .tech-badge { padding: 8px 18px; background: white; color: var(--primary-color); border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; font-weight: 500; box-shadow: 2px 2px 5px rgba(0,0,0,0.03); transition: 0.3s; }
-        .tech-badge:hover { border-color: var(--secondary-color); transform: translateY(-3px); }
+        .tech-badge { padding: 8px 18px; background: white; color: var(--primary-color); border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .tech-badge:hover { border-color: var(--secondary-color); transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         footer { background: var(--dark-bg); color: #999; padding: 60px 10% 30px; text-align: center; }
         .footer-logo { font-size: 1.8rem; font-weight: 700; color: white; margin-bottom: 20px; }
@@ -88,8 +88,7 @@
 
     <section id="history" style="background: var(--light-bg);">
         <h2 class="section-title" data-i18n="nav-history">History</h2>
-        <div class="history-list" id="history-content">
-            </div>
+        <div class="history-list" id="history-content"></div>
     </section>
 
     <section id="tech">
@@ -162,7 +161,7 @@
             },
             en: {
                 "nav-home": "Home", "nav-history": "History", "nav-tech": "Tech Stack",
-                "hero-title": "Healthcare Systems Integration & Technical Support Specialist",
+                "hero-title": "Healthcare Systems Integration & Tech Support Specialist",
                 "hero-subtitle": "T2System provides optimized cloud infrastructure architecture and professional engineering services.",
                 "tech-c1": "Cloud & Platform", "tech-c2": "Traffic & Middleware", "tech-c3": "Automation & DB", "tech-c4": "Observability",
                 "history": [
@@ -186,9 +185,16 @@
             }
         };
 
-        let currentLang = 'ko';
+        // 브라우저 언어 감지 (한국어면 ko, 그 외는 en)
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('ko') ? 'ko' : 'en';
+        }
+
+        let currentLang = detectLanguage();
 
         function updateContent() {
+            // 텍스트 업데이트
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
@@ -196,6 +202,7 @@
                 }
             });
 
+            // 히스토리 업데이트
             const historyContainer = document.getElementById('history-content');
             historyContainer.innerHTML = translations[currentLang].history.map(item => `
                 <div class="history-item">
@@ -204,7 +211,8 @@
                 </div>
             `).join('');
 
-            document.querySelector('.lang-btn').innerText = currentLang === 'ko' ? 'EN' : 'KO';
+            // 언어 전환 버튼 텍스트 업데이트
+            document.querySelector('.lang-btn').innerText = currentLang === 'ko' ? 'ENGLISH' : '한국어';
         }
 
         function toggleLanguage() {
@@ -212,39 +220,8 @@
             updateContent();
         }
 
-        updateContent();
-
-        const translations = {
-        ko: { /* ... 기존 한글 데이터 ... */ },
-        en: { /* ... 기존 영문 데이터 ... */ }
-    };
-
-    // 1. 브라우저 언어 감지 함수
-    function detectLanguage() {
-        // 브라우저 설정 언어 확인 (예: 'ko-KR', 'en-US')
-        const browserLang = navigator.language || navigator.userLanguage;
-        
-        // 언어 코드가 'ko'로 시작하면 한국어, 그 외에는 기본 영어로 설정
-        return browserLang.startsWith('ko') ? 'ko' : 'en';
-    }
-
-    // 현재 언어 상태 (감지된 언어로 초기화)
-    let currentLang = detectLanguage();
-
-    function updateContent() {
-        // ... (기존 updateContent 로직: 텍스트 및 히스토리 렌더링) ...
-        
-        // 버튼 텍스트 변경: 현재 언어가 KO면 다음에 바꿀 수 있는 EN을 표시
-        document.querySelector('.lang-btn').innerText = currentLang === 'ko' ? 'ENGLISH' : '한국어';
-    }
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'ko' ? 'en' : 'ko';
-        updateContent();
-    }
-
-    // 페이지 로드 시 실행
-    window.onload = updateContent;
+        // 페이지 로드 시 초기 실행
+        window.onload = updateContent;
     </script>
 </body>
 </html>
